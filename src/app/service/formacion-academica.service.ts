@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormacionAcademica } from '../model/formacion-academica';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormacionAcademicaService {
-  URL = 'http://localhost:8080/formacionacademica/';
+  URL = 'https://backenddeploy1.onrender.com/formacionacademica/'; /*environment.URL + 'formacionacademica/';*/
 
 
 

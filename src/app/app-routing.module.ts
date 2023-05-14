@@ -6,6 +6,9 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
 import { NewEducacionComponent } from './components/educacion/new-educacion/new-educacion.component';
 import { EditFormacionAcademicaComponent } from './components/educacion/edit-formacion-academica/edit-formacion-academica.component';
+import { NewSkillsComponent } from './components/hys/new-skills/new-skills.component';
+import { EditSkillsComponent } from './components/hys/edit-skills/edit-skills.component';
+import { EditAcercadeComponent } from './components/acerca-de/edit-acercade.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -13,7 +16,11 @@ const routes: Routes = [
   {path: 'nuevaexp', component: NewExperienciaComponent},
   {path: 'editexperiencia/:id', component: EditExperienciaComponent},
   {path: 'nuevaformacionacademica', component: NewEducacionComponent},  
-  {path: 'editformacionacademica/:id', component: EditFormacionAcademicaComponent}
+  {path: 'editformacionacademica/:id', component: EditFormacionAcademicaComponent},
+  {path: 'nuevaskill', component: NewSkillsComponent},
+  {path: 'editskill/:id', component: EditSkillsComponent},
+  {path: 'editaracercade/:id', component: EditAcercadeComponent},
+  
   
 ];
 

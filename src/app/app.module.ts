@@ -21,6 +21,12 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
 import { NewEducacionComponent } from './components/educacion/new-educacion/new-educacion.component';
 import { EditFormacionAcademicaComponent } from './components/educacion/edit-formacion-academica/edit-formacion-academica.component';
+import { EditSkillsComponent } from './components/hys/edit-skills/edit-skills.component';
+import { NewSkillsComponent } from './components/hys/new-skills/new-skills.component';
+import { EditAcercadeComponent } from './components/acerca-de/edit-acercade.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -42,7 +48,11 @@ import { EditFormacionAcademicaComponent } from './components/educacion/edit-for
     NewExperienciaComponent,
     EditExperienciaComponent,
     NewEducacionComponent,
-    EditFormacionAcademicaComponent
+    EditFormacionAcademicaComponent,
+    EditSkillsComponent,
+    NewSkillsComponent,
+    EditAcercadeComponent,
+  
   
     
   ],
@@ -51,7 +61,9 @@ import { EditFormacionAcademicaComponent } from './components/educacion/edit-for
     AppRoutingModule,
     FormsModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
     
     
   ],
