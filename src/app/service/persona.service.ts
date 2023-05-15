@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL= 'https://backenddeploy1.onrender.com/personas/';/* environment.URL + 'personas/';*/
+  URL= 'https://backenddeploy1.onrender.com/personas/';
 
   constructor(private httpClient :HttpClient) { }
 
@@ -33,4 +33,9 @@ export class PersonaService {
   public delete(id: number): Observable<any>{
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }*/
+
+  public getPersona(): Observable<persona>{
+    return this.httpClient.get<persona>(this.URL + "traer/perfil");
+
+  }
 }
